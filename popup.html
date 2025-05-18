@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      width: 300px;
+      padding: 16px;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #384048;
+    }
+    
+    .form-group {
+      margin-bottom: 16px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #384048;
+    }
+    
+    select, input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    
+    .toggle {
+      display: flex;
+      align-items: center;
+    }
+    
+    .toggle label {
+      margin-bottom: 0;
+      margin-left: 8px;
+    }
+    
+    footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Token Gauge Settings</h1>
+  
+  <div class="form-group toggle">
+    <input type="checkbox" id="isEnabled">
+    <label for="isEnabled">Enable Token Gauge</label>
+  </div>
+  
+  <div class="form-group toggle">
+    <input type="checkbox" id="showPercentage">
+    <label for="showPercentage">Show Percentage</label>
+  </div>
+  
+  <div class="form-group">
+    <label for="position">Gauge Position</label>
+    <select id="position">
+      <option value="bottom-right">Bottom Right</option>
+      <option value="bottom-left">Bottom Left</option>
+      <option value="top-right">Top Right</option>
+      <option value="top-left">Top Left</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="tokenLimit">Token Limit</label>
+    <input type="number" id="tokenLimit" min="1000" max="500000" step="1000">
+  </div>
+
+  <div class="form-group">
+    <label for="safeThreshold">Safe Zone Threshold</label>
+    <input type="number" id="safeThreshold" min="1000" max="500000" step="1000">
+  </div>
+
+  <div class="form-group">
+    <label for="cautionThreshold">Caution Zone Threshold</label>
+    <input type="number" id="cautionThreshold" min="1000" max="500000" step="1000">
+  </div>
+  
+  <footer>
+    Token Gauge v1.0.0 | MIT License
+  </footer>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

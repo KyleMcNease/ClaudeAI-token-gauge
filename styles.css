@@ -1,0 +1,52 @@
+.token-gauge {
+  position: fixed;
+  z-index: 9999;
+  width: 180px;
+  height: 140px; /* Increased height to accommodate text */
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Position classes */
+.token-gauge.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.token-gauge.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.token-gauge.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.token-gauge.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+/* SVG styles */
+.token-gauge svg {
+  width: 100%;
+  height: 100%;
+}
+
+#gauge-needle {
+  transition: all 0.5s ease-out;
+}
+
+#token-text {
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: fill 0.3s ease;
+}
